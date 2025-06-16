@@ -1,0 +1,70 @@
+// Секция "Как проходит"
+.process {
+  padding: 80px 0;
+
+  &-title {
+    text-align: center;
+    margin-bottom: 60px;
+
+    h2 {
+      color: $dark;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 3px;
+        background: $primary;
+        margin: 20px auto 0;
+      }
+    }
+  }
+
+  &-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  &-step {
+    background: $light;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: $transition;
+    text-align: center;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    &-icon {
+      font-size: 2.5rem;
+      color: $primary;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: $dark;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: $text-light;
+    }
+  }
+
+  @include respond(mobile) {
+    padding: 60px 0;
+
+    &-title {
+      margin-bottom: 40px;
+    }
+
+    &-steps {
+      grid-template-columns: 1fr;
+    }
+  }
+}

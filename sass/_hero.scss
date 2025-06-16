@@ -1,0 +1,45 @@
+.hero {
+  margin-top: 70px; // Учитываем фиксированную шапку
+  height: 80vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  background: 
+    linear-gradient(rgba(0,0,0,0.4),
+    rgba(0,0,0,0.4)),
+    url('../images/00e7e29b327611f0b78dca37084cf44c.jfif')center/cover no-repeat;
+  color: $light;
+  position: relative;
+
+  &-content {
+    max-width: 600px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+    opacity: 0.9;
+  }
+
+  // Адаптив
+  @include respond(mobile) {
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+
+    &-content {
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+    }
+  }
+}

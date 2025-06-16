@@ -1,0 +1,29 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import 'base';
+@import 'header';
+@import 'hero';
+@import 'about';
+@import 'process';
+@import 'when';
+@import 'faq';
+@import 'cta';
+@import 'footer';
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
